@@ -15,12 +15,14 @@ public class GameResult {
         return new GameResult(0, 0);
     }
 
-    public void addStrike(){
-        strike++;
-    }
-
-    public void addBall(){
-        ball++;
+    public void addJudgeResult(final JudgeResult judgeResult){
+        if(judgeResult.isStrike()){
+            strike++;
+            return;
+        }
+        if(judgeResult.isBall()){
+            ball++;
+        }
     }
 
     public boolean hasBall(){
