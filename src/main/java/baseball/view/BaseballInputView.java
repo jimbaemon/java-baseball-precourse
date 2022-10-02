@@ -8,7 +8,7 @@ public class BaseballInputView {
     private BaseballInputView() {
     }
 
-    public static String readLine(){
+    public static String readLine() {
         return Console.readLine();
     }
 

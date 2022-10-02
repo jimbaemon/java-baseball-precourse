@@ -11,12 +11,12 @@ public class Player {
         this.numbers = numbers;
     }
 
-    public static Player from(String numbers){
+    public static Player from(String numbers) {
         String[] strings = numbers.split("");
         return new Player(stringArrayToIntList(strings));
     }
 
-    private static List<Integer> stringArrayToIntList(String[] numbers){
+    private static List<Integer> stringArrayToIntList(String[] numbers) {
         List<Integer> result = new ArrayList<>();
         for (String number : numbers) {
             result.add(Integer.parseInt(number));

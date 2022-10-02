@@ -11,33 +11,33 @@ public class GameResult {
         this.ball = ball;
     }
 
-    public static GameResult init(){
+    public static GameResult init() {
         return new GameResult(0, 0);
     }
 
-    public void addJudgeResult(final JudgeResult judgeResult){
-        if(judgeResult.isStrike()){
+    public void addJudgeResult(final JudgeResult judgeResult) {
+        if (judgeResult.isStrike()) {
             strike++;
             return;
         }
-        if(judgeResult.isBall()){
+        if (judgeResult.isBall()) {
             ball++;
         }
     }
 
-    public boolean hasBall(){
+    public boolean hasBall() {
         return ball > 0;
     }
 
-    public boolean hasStrike(){
+    public boolean hasStrike() {
         return strike > 0;
     }
 
-    public boolean isNothing(){
+    public boolean isNothing() {
         return strike == 0 && ball == 0;
     }
 
-    public boolean isGameOver(){
+    public boolean isGameOver() {
         return strike == 3;
     }
 

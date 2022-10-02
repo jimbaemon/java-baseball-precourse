@@ -13,7 +13,7 @@ public class Game {
         this.gameResult = GameResult.init();
     }
 
-    public GameResult play(){
+    public GameResult play() {
         List<Integer> playerNumbers = player.numbers();
         for (int i = 0; i < playerNumbers.size(); i++) {
             JudgeResult judgeResult = computer.judge(i, playerNumbers.get(i));
