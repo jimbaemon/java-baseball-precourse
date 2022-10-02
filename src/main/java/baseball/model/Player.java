@@ -25,8 +25,8 @@ public class Player {
     }
 
     private void validate(List<Integer> numbers) {
-        if (numbers.size() > 3) {
-            throw new IllegalArgumentException();
+        if (numbers.size() != 3) {
+            throw new IllegalArgumentException("숫자는 3개를 입력해야 합니다.");
         }
     }
 
