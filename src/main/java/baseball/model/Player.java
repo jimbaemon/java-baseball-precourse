@@ -15,4 +15,8 @@ public class Player {
             throw new IllegalArgumentException();
         }
     }
+
+    public List<Integer> numbers() {
+        return numbers;
+    }
 }
