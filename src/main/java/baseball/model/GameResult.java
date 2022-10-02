@@ -23,6 +23,30 @@ public class GameResult {
         ball++;
     }
 
+    public boolean hasBall(){
+        return ball > 0;
+    }
+
+    public boolean hasStrike(){
+        return strike > 0;
+    }
+
+    public boolean isNothing(){
+        return strike == 0 && ball == 0;
+    }
+
+    public boolean isGameOver(){
+        return strike == 3;
+    }
+
+    public int getStrike() {
+        return strike;
+    }
+
+    public int getBall() {
+        return ball;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {

@@ -1,5 +1,6 @@
 package baseball.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Player {
@@ -8,6 +9,19 @@ public class Player {
     public Player(List<Integer> numbers) {
         validate(numbers);
         this.numbers = numbers;
+    }
+
+    public static Player from(String numbers){
+        String[] strings = numbers.split("");
+        return new Player(stringArrayToIntList(strings));
+    }
+
+    private static List<Integer> stringArrayToIntList(String[] numbers){
+        List<Integer> result = new ArrayList<>();
+        for (String number : numbers) {
+            result.add(Integer.parseInt(number));
+        }
+        return result;
     }
 
     private void validate(List<Integer> numbers) {
