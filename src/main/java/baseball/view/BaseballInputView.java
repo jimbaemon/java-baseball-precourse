@@ -1,6 +1,6 @@
 package baseball.view;
 
-import baseball.controller.GameOver;
+import baseball.controller.RetryAnswer;
 import camp.nextstep.edu.missionutils.Console;
 
 public class BaseballInputView {
@@ -17,8 +17,8 @@ public class BaseballInputView {
         return readLine();
     }
 
-    public static GameOver askPlayNewGame() {
+    public static RetryAnswer askPlayNewGame() {
         System.out.println("게임을 새로 시작하려면1, 종료하려면 2를 입력하세요.");
-        return GameOver.valueOf(readLine());
+        return RetryAnswer.from(readLine());
     }
 }

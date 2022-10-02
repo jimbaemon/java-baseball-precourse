@@ -19,8 +19,8 @@ public class BaseballController {
     public void start() {
         do{
             playGame();
-        }while (BaseballInputView.askPlayNewGame() == GameOver.PLAY_NEW_GAME);
-
+        }while (BaseballInputView.askPlayNewGame() == RetryAnswer.PLAY_NEW_GAME);
+        BaseballOutputView.gameEnd();
     }
 
     public void playGame() {

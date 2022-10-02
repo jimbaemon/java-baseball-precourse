@@ -19,4 +19,8 @@ public class BaseballOutputView {
         }
         System.out.printf("%d스트라이크%n", gameResult.getStrike());
     }
+
+    public static void gameEnd() {
+        System.out.println("게임 종료");
+    }
 }
