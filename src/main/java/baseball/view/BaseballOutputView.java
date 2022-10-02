@@ -8,7 +8,10 @@ public class BaseballOutputView {
             System.out.println("낫싱");
             return;
         }
+        strikeAndBallResults(gameResult);
+    }
 
+    private static void strikeAndBallResults(GameResult gameResult) {
         if (gameResult.hasBall() && gameResult.hasStrike()) {
             System.out.printf("%d볼 %d스트라이크%n", gameResult.getBall(), gameResult.getStrike());
             return;
